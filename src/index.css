@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
 /* убираем отступы, задаем шрифт и его цвет глобально */
 * {
   margin: 0;
-  font-family: "Quicksand";
-  color: rgb(97, 97, 97);
+  font-family: "Roboto";
+  color: rgb(151, 151, 151);
 }
 
 .App {
@@ -12,4 +12,101 @@
   flex-direction: column;
   height: 100vh;
 }
+/*app*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
+}
 
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 1100px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgb(140, 219, 228);
+  border-radius: 3px;
+  /* border: ; */
+}
+
+.navbar h1 {
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* выравнивание ссылок по правому краю контейнера */
+.navbar .links {
+  margin-left: auto;
+}
+
+
+/* убрали подчеркивание ссылок, раздвинули ссылки */
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.home {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  padding: 10px;
+ 
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-top: 1px solid #f2f2f2;
+  width: 900x;
+}
+
+.star {
+  color: #158eb3;
+}
+
+.navbar .star {
+  color: #ffffff;
+}
+.check {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 0;
+  height: 100px;
+  align-content: space-around;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.block {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-between;
+ 
+}
+
+.block span {
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.block div {
+  margin-left: auto;
+  padding-right: 8px;
+}
