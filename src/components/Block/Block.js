@@ -1,6 +1,7 @@
-import Star from "../../Star/Star"
+import Star from "../Star/Star"
 
 const Block = () => {
+  //получаем пропсами данные каждого слова и рендерим
   return (  
     <div className="block">
       <span>{'word'}</span>

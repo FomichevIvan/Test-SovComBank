@@ -3,7 +3,7 @@ const Star = () => {
   // const dispatch = useDispatch();
 
   const likeHandler = (e) => {
-    // dispatch(likeBlogAC(id));
+    
   };
 
   return (
