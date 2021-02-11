@@ -1,8 +1,12 @@
 import Finder from '../Finder/Finder'
 import Parts from '../Parts/Parts'
-import Block from '../Block/Block'
+import List from '../List/List'
+import {useSelector} from 'react-redux'
+import uuid from 'react-uuid'
 
 const Favorite = () => {
+  const store = useSelector(store => store.words)
+
 
   return ( 
     <div className="home">
@@ -11,7 +15,7 @@ const Favorite = () => {
     <Finder />
      <Parts/>
     </div>
-    <Block/>
+    <List words={store}/>
 
    </div>
    );

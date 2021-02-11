@@ -95,14 +95,29 @@
 }
 
 .block {
-  display: flex;
-  margin-top: 20px;
+  display: flex;  
+  /* margin-top: 20px; */
   width: 100%;
   justify-content: space-between;
+  line-height: 300%;
+  padding-right: 18px;
+  padding-left: 15px ;
+  
  
 }
 
-.block span {
+.cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding-left: 10px; */
+  
+ padding-top: 5px;
+
+}
+
+/* .block span {
+  display: block;
   margin-right: auto;
   padding-left: 10px;
 }
@@ -110,4 +125,4 @@
 .block div {
   margin-left: auto;
   padding-right: 8px;
-}
+} */

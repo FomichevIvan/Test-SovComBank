@@ -1,9 +1,31 @@
 import { Input, Icon } from "semantic-ui-react";
 import { useState, useRef } from "react";
+import {useDispatch} from 'react-redux'
+import { loadWordAC } from "../../Redux/actionCreators";
+
 
 const Finder = () => {
+  
+  let throttle = (callback,waitTime) => {
+    var wait = false;
+    return () => {
+      if (!wait) {
+        callback();
+        wait = true;
+        // we will be able to invoke the callback again after a set amount of time
+        setTimeout(()=> {
+          wait = false;
+        }, waitTime)
+      }
+    }
+  }
+  
+  
+  const dispatch = useDispatch()
   const wordHandler = (e) => {
-    console.log(e.target.value);
+    throttle(dispatch(loadWordAC(e.target.value)), 2000)
+    // console.log(e.target.value);
+    
   };
 
   return (
