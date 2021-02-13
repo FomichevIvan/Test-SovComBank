@@ -14,7 +14,7 @@ const Star = ({id, isLiked}) => {
     <div className="pointer">
     <i 
       onClick={likeHandler}
-      className={isLiked ? "star fa fa-star" : "star fa fa-star-o"  }
+      className={isLiked ? "star fa-lg fa fa-star" : "star fa-lg fa fa-star-o"  }
       aria-hidden="true"
     ></i></div>
   );

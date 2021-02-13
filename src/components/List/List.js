@@ -1,19 +1,14 @@
 import Block from "../Block/Block";
-import uuid from 'react-uuid'
-import {useSelector} from 'react-redux'
+import uuid from "react-uuid";
 
-const List = ({words}) => {
-  // const words = useSelector((store) => store.words).filter(el=> el.isLiked)
-  // console.log(words, 'list');
-// получаем слова и рендерим их мапом
-  return ( // рендрерим каждый блок <Block/>
+const List = ({ words }) => {
+  // получаем слова и рендерим их мапом
+  return (
+    // рендрерим каждый блок <Block/>
     <div className="cont">
-      {console.log(words, 'words')}
-      {words&& words.map (word => <Block key={uuid()} word={word}/>)}
-      
-
+      {words && words.map((word) => <Block key={uuid()} word={word} />)}
     </div>
-   );
-}
- 
+  );
+};
+
 export default List;

@@ -1,5 +1,5 @@
 import { Input, Icon } from "semantic-ui-react";
-import { useState, useRef } from "react";
+
 import {useDispatch} from 'react-redux'
 import { loadWordAC } from "../../Redux/actionCreators";
 
@@ -24,13 +24,12 @@ const Finder = () => {
   const dispatch = useDispatch()
   const wordHandler = (e) => {
    throttle(dispatch(loadWordAC(e.target.value)), 2000)
-    // console.log(e.target.value);
-    
+ 
   };
 
   return (
     <div className="finder">
-      <div>
+      <div className="boundary">
         <Input
           onChange={wordHandler}
           size="large"
