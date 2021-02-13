@@ -6,7 +6,7 @@ import { loadWordAC } from "../../Redux/actionCreators";
 
 const Finder = () => {
   
-  let throttle = (callback,waitTime) => {
+  function throttle (callback,waitTime)  {
     var wait = false;
     return () => {
       if (!wait) {
@@ -23,7 +23,7 @@ const Finder = () => {
   
   const dispatch = useDispatch()
   const wordHandler = (e) => {
-    throttle(dispatch(loadWordAC(e.target.value)), 2000)
+   throttle(dispatch(loadWordAC(e.target.value)), 2000)
     // console.log(e.target.value);
     
   };
