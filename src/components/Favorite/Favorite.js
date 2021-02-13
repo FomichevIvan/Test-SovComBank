@@ -8,9 +8,9 @@ import {useState} from 'react'
 
 const Favorite = () => {
 
-  const [checkNoun, setCheckNoun] = useState(false)
-  const [checkVerb, setCheckVerb] = useState(false)
-  const [checkAdjective, setCheckAdjective] = useState(false)
+  const [checkNoun, setCheckNoun] = useState(true)
+  const [checkVerb, setCheckVerb] = useState(true)
+  const [checkAdjective, setCheckAdjective] = useState(true)
   const [sortArr, setSortArr] = useState(['noun', 'verb', 'adjective'])
   console.log(sortArr);
   
