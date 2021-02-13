@@ -8,7 +8,9 @@ const List = ({words}) => {
 // получаем слова и рендерим их мапом
   return ( // рендрерим каждый блок <Block/>
     <div className="cont">
+      {console.log(words, 'words')}
       {words&& words.map (word => <Block key={uuid()} word={word}/>)}
+      
 
     </div>
    );

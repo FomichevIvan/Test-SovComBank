@@ -4,16 +4,14 @@ import {useDispatch} from "react-redux"
 import {sortWordsAC} from "../../Redux/actionCreators"
 import {partsOfSpeechAC} from "../../Redux/actionCreators"
 
-const Parts = () => {
+const Parts = ({checkNounHandler, checkNoun, checkVerbHandler, checkVerb, checkAdjectiveHandler, checkAdjective}) => {
   const dispatch = useDispatch()
   // const nounRef = useRef()
   // const noun = nounRef.current.value
   // console.log(noun);
 
-  const [checkNoun, setCheckNoun] = useState(false)
-  const [checkVerb, setCheckVerb] = useState(false)
-  const [checkAdjective, setCheckAdjective] = useState(false)
-  const [sortArr, setSortArr] = useState([])
+  
+  
 
   // const checkNounHandler = () => {
   //   setCheckNoun(!checkNoun)
@@ -55,9 +53,9 @@ const Parts = () => {
   return (
     <div className="parts">
       <div  className="check" >
-        <Checkbox onClick={() => setCheckNoun(!checkNoun)} checked={checkNoun} label="Noun" />
-        <Checkbox onClick={()=> setCheckVerb(!checkVerb)} checked={checkVerb} label="Verb" />
-        <Checkbox onClick={() => setCheckAdjective(!checkAdjective)} checked={checkAdjective}  label="Adjective" />
+        <Checkbox onClick={checkNounHandler} checked={checkNoun} label="Noun" />
+        <Checkbox onClick={checkVerbHandler} checked={checkVerb} label="Verb" />
+        <Checkbox onClick={checkAdjectiveHandler} checked={checkAdjective}  label="Adjective" />
       </div>
     </div>
   );
