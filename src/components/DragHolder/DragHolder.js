@@ -3,7 +3,7 @@ const DragHolder = () => {
 
   return ( 
     <div>
-      <Icon name="arrows alternate vertical large"/>
+      <Icon name="arrows alternate large"/>
     </div>
    );
 }
