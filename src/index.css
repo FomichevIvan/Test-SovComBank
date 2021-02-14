@@ -144,3 +144,7 @@
   left: 7%;
   top: 45%;
 }
+.dragHolder :hover {
+  cursor: grab;
+  color: rgb(83, 173, 206);
+}
