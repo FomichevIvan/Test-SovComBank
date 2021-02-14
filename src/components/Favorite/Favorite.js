@@ -9,7 +9,9 @@ const Favorite = () => {
   const [checkVerb, setCheckVerb] = useState(true);
   const [checkAdjective, setCheckAdjective] = useState(true);
   const [arrOfParts, setArrOfParts] = useState(["noun", "verb", "adjective"]);
+  const [findInStore, setFindInStore] = useState(null)//флаг, что ищем в сторе
 
+  //реализация механизма фильтрации среди избранных слов по части речи
   const checkNounHandler = () => {
     setCheckNoun(!checkNoun);
     if (!arrOfParts.includes("noun")) {
@@ -24,6 +26,7 @@ const Favorite = () => {
       setArrOfParts([...arrOfParts, "verb"]);
     } else setArrOfParts(arrOfParts.filter((el) => el !== "verb"));
   };
+
   const checkAdjectiveHandler = () => {
     setCheckAdjective(!checkAdjective);
     if (!arrOfParts.includes("adjective")) {
@@ -45,10 +48,16 @@ const Favorite = () => {
     }
   }
 
+  // логика поиска внутри избранного 
+  const findStoreHandler = (e) => {
+    setFindInStore(true)
+    console.log('hello!');
+  }
+
   return (
     <div className="home">
       <div className="input-block">
-        <div className='outDiv'><Finder />
+        <div className='outDiv'><Finder findInStore={findInStore} wordHandler={findStoreHandler} />
         <div className='inDiv'><Parts
           checkNoun={checkNoun}
           checkNounHandler={checkNounHandler}

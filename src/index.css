@@ -127,7 +127,7 @@
   cursor: pointer;
 }
 
-.boundary {
+.boundary {/*фоновое пространство вокруг строки поиска*/
   outline: rgb(182, 182, 182) 1px;
   padding: 20px;
   padding-bottom: 80px;
@@ -135,11 +135,11 @@
   border-radius: 3px;
 }
 
-.outDiv {
+.outDiv {/*блок на заднем плане*/
   position: relative;
 }
 
-.inDiv {
+.inDiv {/*блок на переднем плане, его двигаем */
   position: absolute;
   left: 7%;
   top: 45%;
