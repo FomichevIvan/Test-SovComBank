@@ -11,14 +11,14 @@ const Finder = ({wordHandler, findInStore}) => {
           onChange={wordHandler}
           size="large"
           icon={<Icon name="search" circular link />}
-          placeholder="favorite word..."
+          placeholder="find word..."
         />
       </div> :  <div className="boundary">
         <Input
           onChange={wordHandler}
           size="large"
           icon={<Icon name="search" circular link />}
-          placeholder="word..."
+          placeholder="add word..."
         />
       </div>}
      

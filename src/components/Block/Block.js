@@ -1,8 +1,16 @@
 import DragHolder from "../DragHolder/DragHolder";
 import Star from "../Star/Star";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { Link } from "react-router-dom";
+import { Icon } from "semantic-ui-react";
+import ModalExampleBasic from "../Modal/Modal";
+
+
 
 const Block = ({ word, provided }) => {
+
+  const detailHandler = (e) => {
+    
+  }
   //получаем пропсами данные каждого слова и рендерим
   return (
     <>
@@ -13,6 +21,7 @@ const Block = ({ word, provided }) => {
       <span className="part">{word.partOfSpeech}</span>
       <span>{word.definition.join(", ").slice(0, 20) + "..."}</span>
       <span>[{word.tr}]</span>
+      <span ><ModalExampleBasic word={word}/> </span>
       <div>
         <Star id={word.id} isLiked={word.isLiked} />
       </div>
