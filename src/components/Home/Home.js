@@ -1,5 +1,5 @@
 //dnd: как обернуть глупый компонент в драггабл
-// развернуть карточку слова
+
 //тротлинг
 
 //localStorage!!!!
@@ -34,6 +34,7 @@ const Home = () => {
       <div className="input-block">
         <Finder wordHandler={wordHandler}/>
       </div>
+      {!store.length && <div className="emptyBox">Add your words here!</div>}
       <List words={store} />
     </div>
   );

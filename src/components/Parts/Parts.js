@@ -13,9 +13,9 @@ const Parts = ({
   return (
     <div className="parts">
       <div className="check">
-        <Checkbox onClick={checkNounHandler} checked={checkNoun} label="Noun"/>
-        <Checkbox onClick={checkVerbHandler} checked={checkVerb} label="Verb"/>
-        <Checkbox onClick={checkAdjectiveHandler} checked={checkAdjective} label="Adjective"/>
+        <Checkbox className="checkbox" onClick={checkNounHandler} checked={checkNoun} label="Noun"/>
+        <Checkbox className="checkbox" onClick={checkVerbHandler} checked={checkVerb} label="Verb"/>
+        <Checkbox  className="checkbox" onClick={checkAdjectiveHandler} checked={checkAdjective} label="Adjective"/>
       </div>
     </div>
   );

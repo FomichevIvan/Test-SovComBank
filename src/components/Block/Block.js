@@ -20,7 +20,6 @@ const Block = ({ word, provided }) => {
       <span className="word">{word.word}</span>
       <span className="part">{word.partOfSpeech}</span>
       <span>{word.definition.join(", ").slice(0, 20) + "..."}</span>
-      <span>[{word.tr}]</span>
       <span ><ModalExampleBasic word={word}/> </span>
       <div>
         <Star id={word.id} isLiked={word.isLiked} />

@@ -3,6 +3,7 @@ import { Button, Header, Icon, Modal } from 'semantic-ui-react'
 
 function ModalExampleBasic({word}) {
   const [open, setOpen] = React.useState(false)
+ const link = `https://translate.google.com/?hl=en&sl=auto&tl=en&text=${word.word}&op=translate`
 
   return (
     <Modal
@@ -10,26 +11,33 @@ function ModalExampleBasic({word}) {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      size='small'
+      size='mini'
       trigger={<Icon name="eye large"/>}
+      
     >
-      <Header icon>
+      <Header className="modHeader" icon>
         <Icon name='info' />
-        About the word {word.word}
+        About the word <span>{word.word}</span> 
       </Header>
-      <Modal.Content>
+      <Modal.Content className="modCont">
         <p>
-       Word: {word.word}
-        </p>        
+       Word:  <span>{word.word}</span>
+        </p>    
         <p>
-       Transcription: [{word.tr}]
+       Part of speech:  <span>{word.partOfSpeech}</span> 
+        </p>      
+        <p>
+       Transcription:  <span>[{word.tr}]</span> 
         </p>
         <p>
-       Synonymous: {word.definition.join(", ")}
+       Synonymous:  <span>{word.definition.join(", ")}</span>
+        </p>
+        <p>
+       Google knows all about : <a target="_blank" href={link}>{word.word}</a>
         </p>
       </Modal.Content>
-      <Modal.Actions>
-         <Button color='green' inverted onClick={() => setOpen(false)}>
+      <Modal.Actions className="modAct">
+         <Button classname="butMod" color='blue' inverted onClick={() => setOpen(false)}>
           <Icon name='checkmark' /> Got it!
         </Button>
       </Modal.Actions>
