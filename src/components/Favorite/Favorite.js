@@ -10,6 +10,7 @@ const Favorite = () => {
   const [checkAdjective, setCheckAdjective] = useState(true);
   const [arrOfParts, setArrOfParts] = useState(["noun", "verb", "adjective"]);
   const [findInStore, setFindInStore] = useState(null)//флаг, что ищем в сторе
+  const [substr, setSubstr] = useState('')//стейт для поиска внутри избранного
 
   //реализация механизма фильтрации среди избранных слов по части речи
   const checkNounHandler = () => {
@@ -36,7 +37,7 @@ const Favorite = () => {
 
   const words = useSelector((store) => store.words).filter((el) => el.isLiked).sort((prev, next) => {// сортировка по входящему слову по алфавиту
     if ( prev.word < next.word ) return -1;
-    if ( prev.word < next.word ) return 1;
+    if ( prev.word > next.word ) return 1;
   });
 
   const checkedParts = [];
@@ -50,9 +51,13 @@ const Favorite = () => {
 
   // логика поиска внутри избранного 
   const findStoreHandler = (e) => {
-    setFindInStore(true)
-    console.log('hello!');
+    setTimeout(()=> {
+      setFindInStore(true)// меняем флаг, что ищем теперь в сторе (для корректного отображения строки поиска)
+      setSubstr(e.target.value)// фиксируем запрос из строки
+    }, 500)
+
   }
+
 
   return (
     <div className="home">
@@ -68,7 +73,7 @@ const Favorite = () => {
         /></div>
         </div>
       </div>
-      <List words={checkedParts} />
+      <List words={checkedParts.filter(word => word.word.includes(substr))} />
     </div>
   );
 };

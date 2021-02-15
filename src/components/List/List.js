@@ -1,9 +1,8 @@
 import Block from "../Block/Block";
-import uuid from "react-uuid";
+
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-import DragHolder from "../DragHolder/DragHolder";
-import Star from "../Star/Star";
+
 
 const List = ({ words }) => {
   // получаем слова и рендерим их мапом

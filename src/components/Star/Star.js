@@ -6,6 +6,7 @@ const Star = ({id, isLiked}) => {
 
   const likeHandler = (e) => {
     dispatch(likeWordAC(id))
+    console.log(id, isLiked);
 
     
   };
