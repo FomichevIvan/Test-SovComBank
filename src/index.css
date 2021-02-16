@@ -9,7 +9,6 @@
 
 .App {
   display: flex;
-
   flex-direction: column;
   height: 100vh;
 }
@@ -17,10 +16,10 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   width: 1100px;
   margin: 0 auto 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
 
   /* flex-grow: 1; */
 }
@@ -57,8 +56,9 @@
 
 .home {
   width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
+  align-items: flex-start;
   padding: 10px;
   background: rgb(243, 243, 243);
   padding-right: 18px;
@@ -71,6 +71,7 @@
   margin: auto;
   border-top: 1px solid #f2f2f2;
   width: 1100px;
+  height: 10%;
 }
 
 .star {
@@ -98,7 +99,7 @@
 .block {
   margin-top: 5px;
   margin-bottom: 5px;
- 
+
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -116,20 +117,48 @@
   padding-top: 5px;
 }
 
+.dragHolder {
+  width: 10%;
+}
+
 .word {
   font-weight: 800;
   color: rgb(89, 89, 89);
+  width: 20%;
+  padding-left: 35px;
 }
 
 .part {
   font-style: italic;
+  width: 15%;
+  padding-left: 10px;
+}
+
+.explanation {
+  width: 35%;
+  padding-left: 25px;
+}
+
+.modalIcon {
+  width: 15%;
+  padding-left: 10px;
+}
+.starIcon {
+  width: 5%;
+  text-align: right;
+}
+
+.modalIcon :hover {
+  color: rgb(83, 173, 206);
+  cursor: pointer;
 }
 
 .pointer {
   cursor: pointer;
 }
 
-.boundary {/*фоновое пространство вокруг строки поиска*/
+.boundary {
+  /*фоновое пространство вокруг строки поиска*/
   outline: rgb(182, 182, 182) 1px;
   padding: 20px;
   padding-bottom: 110px;
@@ -138,19 +167,20 @@
   margin-right: 7px;
 }
 
-.outDiv {/*блок на заднем плане*/
+.outDiv {
+  /*блок на заднем плане*/
   position: relative;
 }
 
-.inDiv {/*блок на переднем плане, его двигаем */
+.inDiv {
+  /*блок на переднем плане, его двигаем */
   position: absolute;
   left: 7%;
   top: 45%;
 }
-.dragHolder :hover {  
+.dragHolder :hover {
   color: rgb(83, 173, 206);
   cursor: move;
-
 }
 
 .finder {
@@ -166,8 +196,9 @@
 .modHeader span {
   font-size: 20px;
   font-style: italic;
-  color:  rgb(83, 173, 206) ;
+  color: rgb(83, 173, 206);
   margin: 10px;
+  margin-bottom: 10px;
 }
 
 .modAct {
@@ -180,14 +211,22 @@
   width: 100%;
   font-style: italic;
   font-size: 1.5em;
-  padding-left: 10px;
+  padding-left: 220px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   opacity: 0.3;
-
+  padding-top: 80px;
 }
 
 .checkbox {
-  margin-bottom: 5px
+  margin-bottom: 5px;
+}
+
+.iconInfo {
+  padding-bottom: 10px;
+}
+
+.content {
+  flex-grow: 1;
 }

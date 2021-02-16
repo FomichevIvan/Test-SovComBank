@@ -16,7 +16,7 @@ function ModalExampleBasic({word}) {
       
     >
       <Header className="modHeader" icon>
-        <Icon name='info' />
+        <div className="iconInfo"><Icon  name='info' /></div>
         About the word <span>{word.word}</span> 
       </Header>
       <Modal.Content className="modCont">

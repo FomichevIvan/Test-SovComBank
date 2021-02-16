@@ -1,10 +1,5 @@
-//dnd: как обернуть глупый компонент в драггабл
 
 //тротлинг
-
-//localStorage!!!!
-
-
 
 //css: футер. чекбокс стилизовать. мобильная верстка
 
@@ -19,7 +14,7 @@ import { useSelector } from "react-redux";
 const Home = () => {
   const store = useSelector((store) => store.words).sort((prev, next) => {// сортировка по входящему слову по алфавиту
     if ( prev.word < next.word ) return -1;
-    if ( prev.word < next.word ) return 1;
+    if ( prev.word > next.word ) return 1;
   })
 
   //логика запроса с АПИ Яндекса

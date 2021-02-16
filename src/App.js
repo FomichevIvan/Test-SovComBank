@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="">
+        <div className="content">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/favorite" component={Favorite} />
