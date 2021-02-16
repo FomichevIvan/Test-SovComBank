@@ -4,9 +4,6 @@ import uuid from "react-uuid";
 export const addWordAC = (payload) => ({ type: ADD_WORD, payload });
 export const showErrAC = (payload) => ({ type: SHOW_ERR, payload });
 export const likeWordAC = (payload) => ({ type: LIKE_WORD, payload });
-
-// export const partsOfSpeechAC = (payload) => ({ type:  PARTS_OF_SPEECH, payload });
-
 export const loadWordAC = (word) => (dispatch, getState) => {
   fetch(
     `https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20210209T192534Z.08ac2621745e2f4b.5401d4340590d358d875e2e35d6cc06e62dfb9d2&lang=en-en&text=${word}`,
