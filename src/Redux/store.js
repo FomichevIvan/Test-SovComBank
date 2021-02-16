@@ -6,8 +6,10 @@ import { errReducer } from "./errorReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { applyMiddleware, createStore, compose, combineReducers } from "redux";
 
+//LocalStorage
+
 //проверяем в сторе наличие записи по ключу store
-//если она есть, парсим и сохраняем в переменную
+//если она есть, парсим и сохраняем в переменную persistedState
 //если нет, возвращаем пустой объект
 const persistedState = localStorage.getItem("store")
   ? JSON.parse(localStorage.getItem("store"))

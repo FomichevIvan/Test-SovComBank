@@ -8,7 +8,6 @@ export const likeWordAC = (payload) => ({ type: LIKE_WORD, payload });
 // export const partsOfSpeechAC = (payload) => ({ type:  PARTS_OF_SPEECH, payload });
 
 export const loadWordAC = (word) => (dispatch, getState) => {
- 
   fetch(
     `https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20210209T192534Z.08ac2621745e2f4b.5401d4340590d358d875e2e35d6cc06e62dfb9d2&lang=en-en&text=${word}`,
     {
@@ -21,7 +20,6 @@ export const loadWordAC = (word) => (dispatch, getState) => {
       }
       throw new Error("Smth is wrong(((");
     }) // преобразую в джейсон
-    // .then(res => console.log(res))
     .then((res) => ({
       isLiked: false,
       id: uuid(),
@@ -36,8 +34,10 @@ export const loadWordAC = (word) => (dispatch, getState) => {
       ],
     }))
     .then((res) => {
-      if (!getState().words.some((el) => el.word === res.word)) {// проверяем уникальность
-        dispatch(addWordAC(res));      }
-    })
+      if (!getState().words.some((el) => el.word === res.word)) {
+        // проверяем уникальность
+        dispatch(addWordAC(res));
+      }
+    })//ловим ошибки
     .catch((e) => dispatch(showErrAC(e)));
 };
