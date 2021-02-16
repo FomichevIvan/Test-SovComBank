@@ -11,3 +11,18 @@
 
 <img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/1.png" width="70%">
 <hr>
+
+<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/2.png" width="70%">
+<hr>
+
+<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/3.png" width="70%">
+<hr>
+
+<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/4.png" width="70%">
+<hr>
+
+<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/5.png" width="70%">
+<hr>
+
+<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/master/img/6.png" width="70%">
+<hr>
