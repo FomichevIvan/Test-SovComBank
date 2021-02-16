@@ -9,6 +9,5 @@
 - В модальном окне разворачиваем детальную информацию. 
 - Все слова сохраняются в LocalStorage и не удаляются при закрытии браузера. 
 
-<img src="https://github.com/FomichevIvan/Test-SovComBank/blob/tree/master/img/1.png" width="70%">
+<img src="https://github.com/FomichevIvan/Test-SovComBank/tree/master/img/1.png" width="70%">
 <hr>
-
